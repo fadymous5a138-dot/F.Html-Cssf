@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML & CSS Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      padding: 40px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    /* === Home Page === */
+    #home {
+      background-color: #e0f7fa;
+      text-align: center;
+    }
+    #home img {
+      width: 200px;
+      border-radius: 50%;
+    }
+
+    /* === Hobbies Page === */
+    .hobbies-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .hobby img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .hobby img:hover {
+      transform: scale(1.2);
+    }
+
+    /* === Birthday Page === */
+    #birthday img {
+      width: 300px;
+      display: block;
+      margin: auto;
+    }
+
+    /* === Contact Page === */
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #00796b;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+    .social {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .social img {
+      width: 40px;
+      margin: 0 10px;
+    }
+
+    /* === Slider Page === */
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+    }
+    .slide {
+      flex: 0 0 300px;
+      scroll-snap-align: start;
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #ccc;
+      text-align: center;
+    }
+    .slide img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* === CV Page === */
+    .cv-section {
+      margin-bottom: 20px;
+    }
+    .cv-section h3 {
+      margin-bottom: 10px;
+      color: #00796b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page 1: Home -->
+  <section id="home">
+    <h2>Welcome to My Website</h2>
+    <img src="./IMG_٢٠٢٤٠٩١٧_١٦١١٠٧.jpg" alt="My Photo">
+    <p>Hello, I'm Fady moussa . This is my personal website!</p>
+  </section>
+
+
+  <!-- Page 2: Hobbies -->
+  <section id="hobbies">
+    <h2>My Hobbies</h2>
+    <div class="hobbies-gallery">
+      <div class="hobby">
+        <img src="./2478315-احتفال-ميسي-الشهير.webp" alt="Hobby 1">
+      </div>
+      <div class="hobby">
+        <img src="./84e22119072b5a3248eada317ef6656c.jpg" alt="Hobby 2">
+      </div>
+      <div class="hobby">
+        <img src="./software-developer-6521720-scaled.jpg" alt="Hobby 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 3: Birthday -->
+  <section id="birthday">
+    <h2>My Birthday</h2>
+    <img src="./325.jpg" alt="Birthday Image">
+    <p>Write a kind message below (interactive part requires JavaScript, not included).</p>
+  </section>
+
+  <!-- Page 4: Contact Us -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div class="social">
+      <h3>Follow Me:</h3>
+      <img src="./images.png" alt="Facebook">
+      <img src="./Instagram_logo_2022.svg.webp" alt="Instagram">
+      <img src="./images (1).png" alt="Twitter">
+    </div>
+  </section>
+
+  <!-- Page 5: Countries Slider -->
+  <section id="countries">
+    <h2>Countries I Wish to Visit</h2>
+    <div class="slider">
+      <div class="slide">
+        <h3>Spain</h3>
+        <img src="./79111b3c2f.jpg" alt="Spain">
+      </div>
+      <div class="slide">
+        <h3>France</h3>
+        <img src="./fs440x440px-9df74a8b1e2cc44d6ffadb94c315afe4.webp" alt="France">
+      </div>
+      <div class="slide">
+        <h3>Italy</h3>
+        <img src="./79111b3c2f.jpg" alt="Italy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 6: CV -->
+  <section id="cv">
+    <h2>My CV</h2>
+    <div class="cv-section">
+      <h3>Personal Information</h3>
+      <p><strong>Name:</strong> Fady Moussa </p>
+      <p><strong>Email:</strong> fadymous5a138@gmail.com</p>
+      <p><strong>Phone:</strong> 01202651056</p>
+    </div>
+    <div class="cv-section">
+      <h3>Skills</h3>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>Responsive Design</li>
+        <li>Teamwork</li>
+      </ul>
+    </div>
+    <div class="cv-section">
+      <h3>Education</h3>
+      <p>Bachelor's Degree – Your University</p>
+    </div>
+    <div class="cv-section">
+      <h3>Experience</h3>
+      <p>Intern at XYZ Company (2024)</p>
+    </div>
+  </section>
+
+</body>
+</html>
